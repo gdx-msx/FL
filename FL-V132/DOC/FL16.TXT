@@ -1,0 +1,160 @@
+  ---------   FL16.COM v1.32   ---------
+            by GDX   Mars 2015 
+     based on FLLOAD by K. Tsujikawa
+  --------------------------------------
+ 
+ 
+This command allows you to load a ASCII 16K type Megarom file into a same type
+MegaFlashRom. In addition, the Roms or Megaroms files are converted on-the-fly
+to fit them to be used with the same MegaFlashRom type. Some ROMs are also
+patched to correct the known problems. (See Converted Roms List)
+
+
+Requirements
+------------
+
+- MSX1 or newer
+- MSX-DOS 1 or 2
+- 64Ko of RAM
+- Hard disk interface, FDD drive or equivalent
+- 128~1024KB MegaFlashRom of ASCII 16K type (see Supported 
+  MegaFlashRoms)
+
+
+Usage
+-----
+
+1/ Loading a Rom File
+
+Enter the following command under MSX-DOS(2):
+
+  A>FL16 filename.ext /Sxx /R
+
+  /Sxx parameter is used to indicate the number of slot of cartridge port where
+  the MegaFlashRom is inserted. (ex: /S1 or /S01 for primary Slot 1. /S86 for
+  the secondary Slot 1-2.) If this parameter is omitted the cartridge will
+  be detected automatically. However, if another Flash-ROM is present in
+  another Slot, you must specify this parameter to make sure to load the file
+  in targeted Flash-ROM.
+
+  Note: If the slot indicated is a Flash-Rom containing a Disk-ROM installed
+        in the system a message will appear and the writing will be canceled.
+
+  /R parameter will reset computer after Rom loading.
+
+
+2/ Erasing FlashROM
+
+Enter the following command:
+
+  A>FL16 /E /Sxx
+
+  Same remark that upper above /Sxx.
+
+  Note: If the slot indicated is a Flash-Rom containing a Disk-Rom installed
+        in the system a confirmation message will appear. Normally, you should
+        not erase it (press the "N" key). If in a particular case, you need to
+        delete a Disk-ROM, press "Y" and restart the MSX forthwith.
+
+Warning: The auto-detection seeks a Flash Rom regardless of the mapper type and
+         chooses the first cartridge found.
+
+
+On-the-fly Converted Roms List
+------------------------------
+
+- All 8/16KB. (Add a mirror and a pages initialisation routine)
+- All 32KB Roms. (pages initialisation)
+- Cross Blaim
+- Harryfox Yuki no Maouhen (J)
+- Galaxian
+- QBert [Antipiracy]
+- Super Lode Runner
+- Super Suwanggi - Super Altered Beast
+
+
+Natively Supported MegaRoms List
+--------------------------------
+
+- Abu Simbel Profanation (S)
+- AcroJet
+- Aleste
+- Aliens Alien 2
+- Andorogynus Han Seimei Senki Andorogynus (J)
+- Aoki-ookami to shiroki-hinroku - Genghis Khan
+- Borfes to 5-nin no Akuma (J)
+- Craze (J)
+- DIRES network version
+- Dungeon Hunter (J)
+- Dynamite Bowl
+- Fantasy Zone II Opa-Opa no Nami (J)
+- Gakuen Monogatari - High School Story (J)
+- Garakuta
+- Girly block
+- Golvellius (J)
+- Hacker (J)
+- Higemaru Makaijima Nana-tsu no Shima Daibouken (J)
+- Hole in One Special
+- Inemuriryuu - Asada Tetsuya no A-kyuu mah-jong
+- Ikari (J)
+- Inemuriryuu Asada Tetsuya no A-kyuu Mahjong (J)
+- Ishtar no Fukkatsu - The Return of Ishtar
+- Jagur 5 (J)
+- Jansei (J)
+- Kempelen chess
+- King's Knight
+- Kitsugo 120
+- Knither Special
+- Koronis Rift
+- Mahjong Gokuu (J)
+- Malaya no Hihou (J)
+- Meikyuu Shinwa - Eggerland 2 (J)
+- Penguin-kun Wars 2 (J)
+- Pro Yakyuu Family Stadium Pennant Race (J)
+- Robo Wrest 2001
+- Romancia (J) MSX1 & MSX2 Version
+- Shanghai
+- Strategic Mars (J)
+- Super Games World 126 (K) (Screen Software)
+- Super Rambo Special (J)
+- The Cockpit
+- The Light Corridor (Doesn't work on some MSX)
+- Tumego 120 (J)
+- Vaxol Heavy Armed Storm Vehicle
+- Victorious Nine II - Koukou Yakyuu Hen (J)
+- Woody Poco (J)
+- Xevious Fardraut Saga (J)
+- Zanac Ex
+- Zemmix 126 Games (K)
+- Zoids Chuuou Tairiku no Tatakai (J)
+
+
+Supported MegaFlashRom Cartridges
+---------------------------------
+
+- FLASH-ROM Cartridge 16K by K. Tsujikawa
+- Mega Flash ROM ASCII16 by Manuel Pazos (SRAM included)
+- MAB Flash Cartridge 16K by Ericb59, Jipe and E. Brychkov
+  http://msx.ebsoft.fr/MAB-Flash.php
+- MAB Flash Kit 2048K by Ericb59, Jipe and E. Brychkov
+  http://www.ebsoft.fr/shop/fr/home/37-flash-kit-2048-k.html
+- Padial LPE-FLASHG cartridge by Leonardo
+  http://msx.deneb.nl/page0.HTM
+- Others?
+
+
+Versions history
+-----------------
+
+1.32 - Added patch for Gangjeol Robocop (Steel Robocop)
+1.31 - Fixed a condition for secondary slots.
+1.30 - Added a protection for not inadvertently erase the Flash-Rom of
+       disk interfaces. 
+     - Added support for AM29F016 Flash-ROM.
+     - Added patch for Super Suwanggi - Super Altered Beast (Clover).
+1.20 - First release (beta).
+
+
+Special thanks to Jipe, Ericb59, Fabf and K. Tsujikawa.
+
+GDX
