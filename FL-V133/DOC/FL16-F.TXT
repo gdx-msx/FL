@@ -1,0 +1,167 @@
+   ---------   FL16.COM v1.33   ---------
+       Programmé par GDX  (2015~2022)
+       Basé sur FLLOAD by K.Tsujikawa
+ 
+ --------------------------------------
+
+
+Cette commande permet de charger le fichier d'une Megarom de type ASCII à page
+de 16Ko dans une MegaFlashRom de même type. De plus, les Roms et certaines
+Megaroms sont convertis à la volée pour les adapter au type de Mapper de la
+MegaFlashRom utilisée. Certaines ROM sont aussi patchées pour corriger les
+problèmes connus. (voir la liste des ROM converties à la volée)
+
+
+Configuration requise
+----------------------
+
+- MSX1 ou plus récent
+- MSX-DOS 1 ou 2
+- 64Ko de RAM
+- Interface de disque dur, disquette ou équvalent
+- MegaFlashRom de 128~1024Ko à mapper ASCII 16K (voir MegaFlashRom
+  compatibles)
+
+
+Utilisations
+------------
+
+1/ Charger un fichier de ROM
+
+  Entrez la commande suivante sous MSX-DOS(2) :
+
+  A>FL16 filename.ext /Sxx /R
+
+  Le paramètre /Sxx sert à indiquer le numéro de Slot du port cartouche dans
+  lequel la MegaFlashRom est insérée. (ex : /S1 ou /S01 pour le Slot
+  primaire 1. /S86 pour le Slot secondaire 1-2.) Si ce paramètre est omis, la
+  cartouche sera détectée automatiquement. Cependant si une autre FlashROM est
+  présente dans un autre port, vous devrez indiquer ce paramètre afin d'être
+  sûr de charger le fichier dans la bonne MegaFlashRom.
+ 
+  Note : Si le Slot indiqué est celui d'une Flash-Rom contenant une Disk-ROM
+         installée dans le système un message s'affichera et l'écriture sera
+         annulée.
+
+  Le paramètre /R permet de lancer la ROM automatiquement après le chargement.
+
+
+2/ Effacer la MegaFlashRom
+
+  Entrez la commande suivante :
+
+  A>FL16 /E /Sxx
+
+  Même remarque que ci-dessus pour /Sxx.
+
+  Note : Si le Slot indiqué est celui d'une Flash-Rom contenant une Disk-ROM
+         installée dans le système un message de confirmation s'affichera.
+         Normalement, vous ne devez pas l'effacer (appuyer sur la touche "N").
+         Si dans un cas particulier, vous avez besoin d'effacer une Disk-ROM,
+         appuyer sur la touche "Y" et redémarrer le MSX aussitôt.
+
+Attention : L'auto-détection cherche une Flash Rom sans tenir compte du type
+            de Mapper et choisit la première cartouche trouvée.
+
+
+Liste des ROM converties à la volée
+-----------------------------------
+
+FLOAD.COM avec une MegaFlashRom au mapper ASCII :
+
+- Toutes les Roms de 8/16Ko. (ajoute des reflets et une routine d'initialisation des pages)
+- Toutes les Roms de 32Ko. (initialisation des pages)
+- Cross Blaim
+- Galaxian
+- Harryfox Yuki no Maouhen (J)
+- QBert
+- Super Lode Runner
+- Super Suwanggi - Super Altered Beast
+
+  
+Liste des Megaroms au Mapper ASC16
+----------------------------------
+
+- Abu Simbel Profanation (S)
+- AcroJet
+- Aleste
+- Aliens Alien 2
+- Andorogynus Han Seimei Senki Andorogynus (J)
+- Aoki-ookami to shiroki-hinroku - Genghis Khan
+- Borfes to 5-nin no Akuma (J)
+- Craze (J)
+- Dungeon Hunter (J)
+- Dynamite Bowl
+- Fantasy Zone II Opa-Opa no Nami (J)
+- Gakuen Monogatari - High School Story (J)
+- Garakuta
+- Girly block
+- Golvellius (J)
+- Hacker (J)
+- Higemaru Makaijima Nana-tsu no Shima Daibouken (J)
+- Hole in One Special
+- Inemuriryuu - Asada Tetsuya no A-kyuu mah-jong
+- Ikari (J)
+- Inemuriryuu Asada Tetsuya no A-kyuu Mahjong (J)
+- Ishtar no Fukkatsu - The Return of Ishtar
+- Jagur 5 (J)
+- Jansei (J)
+- Kempelen chess
+- King's Knight
+- Kitsugo 120
+- Knither Special
+- Koronis Rift
+- Mahjong Gokuu (J)
+- Malaya no Hihou (J)
+- Meikyuu Shinwa - Eggerland 2 (J)
+- Penguin-kun Wars 2 (J)
+- Pro Yakyuu Family Stadium Pennant Race (J)
+- Robo Wrest 2001
+- Romancia (J) Version MSX1 et MSX2
+- Shanghai
+- Strategic Mars (J)
+- Super Games World 126 (K) (Screen Software)
+- Super Pierrot (fonctionne avec le Mapper ASCII 16k) 
+- Super Rambo Special (J)
+- The Cockpit
+- The Light Corridor (Ne marche pas sur certains MSX)
+- Tumego 120 (J)
+- Vaxol Heavy Armed Storm Vehicle
+- Victorious Nine II - Koukou Yakyuu Hen (J)
+- Woody Poco (J)
+- Xevious Fardraut Saga (J)
+- Zanac Ex
+- Zemmix 126 Games (K)
+- Zoids Chuuou Tairiku no Tatakai (J)
+
+
+MegaFlashRoms compatibles
+-------------------------
+
+- FLASH-ROM Cartridge 16K de Tsujikawa
+- Mega Flash ROM ASCII16 de Manuel Pazos (SRAM incluse mais sans battery)
+- MAB Flash Cartridge 16K d'Ericb59, Jipé et E. Brychkov
+  http://msx.ebsoft.fr/MAB-Flash.php
+- MAB Flash Kit 2048K d'Ericb59, Jipé et E. Brychkov
+  http://www.ebsoft.fr/shop/fr/home/37-flash-kit-2048-k.html
+- Cartouche Padial LPE-FLASHG par Leonardo
+  http://msx.deneb.nl/page0.HTM
+- Autres ?
+
+
+Historique des versions
+-----------------------
+
+1.33 - Ajout de la compatibilité avec la 29F016
+1.32 - Ajout d'un patch pour Gangjeol Robocop (Steel Robocop)
+1.31 - Correction d'une condition pour les Slots secondaires.
+1.30 - Ajout d'une protection pour ne pas effacer par mégarde la
+       Flash-Rom d'une interface de disque.
+     - Ajout de la AM29F016 dans la détection de la Flash-ROM.
+     - Ajout du patch pour Super Suwanggi - Super Altered Beast (Clover).
+1.20 - Première version (beta).
+
+
+Je remercie Jipé, Ericb59, Fabf et K. Tsujikawa.
+
+GDX

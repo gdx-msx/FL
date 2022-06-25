@@ -1,0 +1,251 @@
+   ---------    FL8.COM v1.33   ---------
+       Programmé par GDX  (2015~2022)
+       Basé sur FLLOAD by K.Tsujikawa
+ 
+ --------------------------------------
+
+
+Cette commande permet de charger le fichier d'une Megarom de type ASCII à page
+de 8Ko dans une MegaFlashRom de même type. De plus, les Roms et certaines
+Megaroms sont convertis à la volée pour les adapter au type de Mapper de la
+MegaFlashRom utilisée. Certaines ROM sont aussi patchées pour corriger les
+problèmes connus. (voir la liste des ROM converties à la volée)
+
+
+Configuration requise
+----------------------
+
+- MSX1 ou plus récent
+- MSX-DOS 1 ou 2
+- 64Ko de RAM
+- Interface de disque dur, disquette ou équvalent
+- MegaFlashRom de 128~1024Ko à mapper ASCII 8K (voir MegaFlashRom
+  compatibles)
+
+
+Utilisations
+------------
+
+1/ Charger un fichier de ROM
+
+  Entrez la commande suivante sous MSX-DOS(2) :
+
+  A>FL8 filename.ext /Sxx /R /A
+
+  Le paramètre /Sxx sert à indiquer le numéro de Slot du port cartouche dans
+  lequel la MegaFlashRom est insérée. (ex : /S1 ou /S01 pour le Slot
+  primaire 1. /S86 pour le Slot secondaire 1-2.) Si ce paramètre est omis, la
+  cartouche sera détectée automatiquement. Cependant si une autre FlashROM est
+  présente dans un autre port, vous devrez indiquer ce paramètre afin d'être
+  sûr de charger le fichier dans la bonne MegaFlashRom.
+ 
+  Note : Si le Slot indiqué est celui d'une Flash-Rom contenant une Disk-ROM
+         installée dans le système un message s'affichera et l'écriture sera
+         annulée.
+
+  Le paramètre /R permet de lancer la ROM automatiquement après le chargement.
+
+  Le paramètre /A permet d'ajouter une ROM derrière celle qui a été flashée.
+  Cette option n'est utile que pour la cartouche MAB 2048K.
+
+
+2/ Effacer la MegaFlashRom
+
+  Entrez la commande suivante :
+
+  A>FL8 /E /Sxx
+
+  Même remarque que ci-dessus pour /Sxx.
+
+  Note : Si le Slot indiqué est celui d'une Flash-Rom contenant une Disk-ROM
+         installée dans le système un message de confirmation s'affichera.
+         Normalement, vous ne devez pas l'effacer (appuyer sur la touche "N").
+         Si dans un cas particulier, vous avez besoin d'effacer une Disk-ROM,
+         appuyer sur la touche "Y" et redémarrer le MSX aussitôt.
+
+Attention : L'auto-détection cherche une Flash Rom sans tenir compte du type
+            de Mapper et choisit la première cartouche trouvée.
+
+
+Liste des ROM converties à la volée
+-----------------------------------
+
+- Toutes les ROM de 8, 16 et 32Ko. (ajoute des reflets et une routine d'initialisation des pages)
+- Akumajou Dracula - Vampire Killer (aka: Castlevania)
+- Anty [PSG fix]
+- Athletic Ball [PSG fix]
+- Familly boxing
+- Galaxian
+- Gambare Goemon - Karakuri Douchuu (J)
+- Gangjeol Robocop (Steel Robocop)
+- Garakuta
+- Graduis - Nemesis (JE)
+- Hi no Tori (Fire bird) - Hououhen
+- Knightmare II Galious no Meikyuu - The Maze of Galious (JE)
+- Knightmare III - Shalom (J)
+- King Kong 2
+- MSX-DOS 2.20
+- QBert [Copy protection]
+- The Treasure of Usas (JE)
+- Yume Tairiku Adventure - Penguin Adventure (JE)
+- Super Game World 80 (K) (Zemina)
+- Super Lode Runner
+- Zombie Hunter
+
+  
+Liste des Megaroms au Mapper ASC8
+---------------------------------
+
+- 1942 version MSX1 et MSX2
+- ABADIA
+- ABADIA2
+- Activision Gamecase
+- Advanced Dungeons & Dragons Heroes of The Lance
+- American Soccer
+- Angma Jidae - Devil zone (Uttum Soft)
+- Animal Land Satsujin Jikken (J)
+- Arguice no Tsubasa (J)
+- Arkanoid II Revenge of DoH
+- AshGuine Fukushuu no Honoo (J)
+- AshGuine Kokuu no Gajou (J)
+- AshGuine Densetsu no Sensenshi (J)
+- Batman
+- Bomber King
+- Bubble bobble
+- Casio Gamecase
+- Compile Gamecase
+- Crimson (J)
+- Daiva Story 4 Asura's Bloodfeud (J)
+- Darwin 4078
+- Deep Dungeon (J)
+- Deep Dungeon II Yuushi no Monshou (J)
+- Deep Forest (J)
+- Digital Devil Monogatari Megami Tensei (J)
+- Dragon Buster
+- Dragon quest (J)
+- Dragon quest II Akuryou no Kamigami (J)
+- Dynamite ball
+- Dragon Slayer IV Drasle Family (J) version MSX1 et MSX2
+- Druid
+- F-15 Strike Eagle (J)
+- Famicle parodic
+- Family Billiards
+- Fantazy zone
+- Final Zone Wolf (J)
+- Fire ball
+- Fleet Commander II Koukon no Kaiiki (J)
+- Flight simulator With Torpedo Attack
+- Gall Force Defense of Chaos
+- Gambler JikoChuu Shinpa 1 (J)
+- Gambler JikoChuu Shinpa 2 Jishou! Kyougou Janshi Hen (J)
+- Garyuu Ou (J)
+- Gate of Labyrinth
+- Haja no Fuuin (J)
+- Hard Ball
+- Hal Gamecase
+- High School! Kimengumi (J)
+- Honkaku shougi - Taro Osamu Fundamuntal rules of shougi
+- Hydlide 3 The Space Memories MSX2 (J)
+- Ide Yousuke Meijin no Jissen Mahjong (J)
+- Karuizawa Yuukai Annai (Karuizawa Murder) (J)
+- Kikikaikai (J)
+- Labyrinth (J)
+- Lick to Mick no Daibouken (Rick and Mick's Adventure) (J)
+- Lupin San-sei Babiron No Ougon Densetsu
+- Lupin San-sei Cagliostro no Shiro
+- M36 A Life Planet (J)
+- Mad Rider
+- Magnum Kiki Ippatsu Empire City
+- Maison Ikkoku Kanketsuhen Sayonara Soshite... (J)
+- Maison Ikkoku Omoide no Photograph (J)
+- Marchen Veil I (J)
+- Mirai (Future) (J) version MSX1 et MSX2
+- Mississippi Satsujin Jiken (J)
+- Mitsume Ga Tooru - The Three Eyed One Comes Here (J)
+- Moero!! Nettou Yakyuu '88 (J)
+- MonMon Kaibutsu - The MonMon Monster (J)
+- Mr. Mole (Nerlaska Studio) (version ASC8)
+- MSX Ei-wa Jiten - MSX English-Japanese Dictionary
+- MSX Program Collection 50-pon Fandom Library 1 (J)
+- MSX Program Collection 50-pon Fandom Library 2 (J)
+- MSX Program Collection 50-pon Fandom Library 3 (J)
+- Mugen Senshi Valis The Fantasm Soldier (J)
+- Murder Club Satsujin Club (J)
+- Ninja kun - Ashura no shyou
+- Nekketsu Juudou (Fighting Judo) (J)
+- New Horizon English Course 1 (J) (Tokyo Shoseki)
+- Ninja-kun Ashura no Shou (J)
+- Out run
+- Pac-Mania
+- Pachi Pro Densetsu (J)
+- Penguin Mind
+- Predator
+- Pro Yakyuu Fan Telenet Stadium (J)
+- Project A2 Shijousaidai no Hyouteki (J)
+- Psychic War - Cosmic Soldier 2 (J)
+- Quinpl
+- Rastan saga
+- Relics MSX1
+- Relics MSX2 (J)
+- Replicart
+- Retaliot
+- Return of Jelda
+- Scramble Formation.rom
+- Seikima II Special Akuma no Gyakushuu (J)
+- Senjou no Ookami The way to victory (Wolf of Battlefield)
+- Sofia
+- Star Virgin (J)
+- Street Master (Zemina)
+- Super Runner
+- Super Tritorn
+- Synthe saurus
+- Tengoku Yoitoko (J)
+- Tetris
+- The Adventures of Moron van der Slut Escape from Castro Castro
+- The Double Vision Bishoujo Shashinkan (J)
+- The Eidolon
+- The Fairy Land Story
+- Topple Zip MSX2 (J)
+- Tsurikichi Sanpei Blue Marine Hen (J)
+- Tsurikichi Sanpei Tsuri Sennin Hen (J)
+- Urusei Yatsura Koi no Survival Birthday (J)
+- Wing nan 2 Dark Killer no Fukkatsu (J)
+- Yaksa (J)
+- Yamamura Misa Suspense Kyoto Ryuu no Tera Satsujin Jiken (J)
+- Young Sherlock The Legacy of Doyle (J)
+- Yuurei-kun (Ghost Boy)
+- Zoid - Chuuou tairiku no tatakai
+- Zombie Hunter (J)
+- Zukkoke Yajikita Onmitsu Douchuu (J) 
+
+
+MegaFlashRom compatibles
+------------------------
+
+- FLASH-ROM Cartridge 8K de Tsujikawa
+- Mega Flash ROM ASCII8 de Manuel Pazos (SRAM incluse mais sans battery)
+- MAB Flash Cartridge 8K d'Ericb59, Jipé et E. Brychkov
+  http://msx.ebsoft.fr/MAB-Flash.php
+- MAB Flash Kit 2048K d'Ericb59, Jipé et E. Brychkov
+  http://www.ebsoft.fr/shop/fr/home/37-flash-kit-2048-k.html
+- Cartouche Padial LPE-FLASHG par Leonardo
+  http://msx.deneb.nl/page0.HTM
+- Autres ?
+
+
+Historique des versions
+-----------------------
+
+1.33 - Ajout de la compatibilité avec la 29F016
+1.32 - Ajout d'un patch pour Gangjeol Robocop (Steel Robocop)
+1.31 - Correction d'une condition pour les Slots secondaires.
+1.30 - Ajout d'une protection pour ne pas effacer par mégarde la
+       Flash-Rom d'une interface de disque.
+     - Ajout de la AM29F016 dans la détection de la Flash-ROM.
+     - Ajout de l'option /A.
+1.20 - Première version (beta).
+
+
+Je remercie Jipé, Ericb59, Fabf et K. Tsujikawa.
+
+GDX
