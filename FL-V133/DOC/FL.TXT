@@ -4,8 +4,8 @@
   --------------------------------------
  
  
-This command allows you to load a Megarom of SCC type file into a same type
-MegaFlashRom. In addition, the Roms or Megaroms files are converted
+This command allows you to load a file of SCC Megarom into a same type
+MegaFlashRom. In addition, the Roms and some Megaroms files are converted
 on-the-fly to fit them to be used with the same MegaFlashRom type. Some
 ROMs are also patched to correct the known problems. (See Converted Roms
 List)
@@ -18,7 +18,7 @@ Requirements
 - MSX-DOS 1 or 2
 - 64Ko of RAM
 - Hard disk interface, FDD drive or equivalent
-- 128~1024KB MegaFlashRom of SCC type (see Supported MegaFlashRom
+- 128~2048KB MegaFlashRom of SCC type (see Supported MegaFlashRom
   cartridges List)
 
 Usage
