@@ -5,11 +5,11 @@
  --------------------------------------
 
 
-Cette commande permet de charger le fichier d'une Megarom de type SCC dans une
-MegaFlashRom de même type. De plus, les Roms et certaines Megaroms sont
-convertis à la volée pour les adapter au type de Mapper de la MegaFlashRom
-utilisée. Certaines ROM sont aussi patchées pour corriger les problèmes
-connus. (voir la liste des ROM converties à la volée)
+Cette commande permet de charger le fichier d'une Megarom au mapper SCC dans
+une MegaFlashRom de même type. De plus, les Roms et certaines Megaroms sont
+converties à la volée pour les adapter au type de Mapper de la MegaFlashRom SCC.
+Certaines ROM sont aussi patchées pour corriger les problèmes connus. (voir la
+liste des ROM converties à la volée)
 
 
 Configuration requise
@@ -19,7 +19,7 @@ Configuration requise
 - MSX-DOS 1 ou 2
 - 64Ko de RAM
 - Interface de disque dur, disquette ou équvalent
-- MegaFlashRom de 128~1024Ko à mapper SCC (voir MegaFlashRom compatibles)
+- MegaFlashRom de 128~2048Ko avec mapper SCC (voir MegaFlashRom compatibles)
 
 
 Utilisations
@@ -49,7 +49,7 @@ Utilisations
 
   Entrez la commande suivante :
 
-  A>FL8 /E /Sxx
+  A>FL /E /Sxx
 
   Même remarque que ci-dessus pour /Sxx.
 
